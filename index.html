@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Bus Media – Team</title>
+
+  <style>
+
+body {
+  margin: 0;
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.team-section {
+  padding: 60px 20px;
+}
+
+/* ================= DESKTOP HOVER VIEW ================= */
+.team-desktop {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+/* Each Member */
+.member {
+  position: relative;
+  width: 220px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Circle Image */
+.circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  z-index: 10;
+}
+
+/* Hover Box */
+.hover-box {
+  position: absolute;
+  width: 200px;
+  height: 260px;
+  background: #fff;
+  color: #000;
+  padding: 18px;
+  border-radius: 14px;
+  opacity: 0;
+  transition: 0.3s ease;
+  z-index: 20; /* Makes the box come forward */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* LEFT SIDE MEMBERS — Box opens to the RIGHT */
+.member.left .hover-box {
+  left: 200px;
+  transform: translateX(-10px); /* animation start */
+}
+
+/* RIGHT SIDE MEMBERS — Box opens to the LEFT */
+.member.right .hover-box {
+  right: 200px;
+  transform: translateX(10px); /* animation start */
+}
+
+/* On Hover — Show Box */
+.member:hover .hover-box {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ================= MOBILE / TAB CARD VIEW ================= */
+.team-mobile {
+  display: none;
+}
+
+.card {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 16px;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* ================= RESPONSIVE BREAKPOINT ================= */
+@media (max-width: 768px) {
+
+  .team-desktop {
+    display: none;
+  }
+
+  .team-mobile {
+    display: block;
+  }
+}
+
+  </style>
+
+</head>
+<body>
+
+
+<section class="team-section">
+
+  <!-- DESKTOP HOVER VIEW -->
+  <div class="team-desktop">
+
+    <!-- LEFT (Hover box RIGHT) -->
+    <div class="member left">
+      <img src="1.jpg" class="circle">
+      <div class="hover-box">
+        <h3>Navneet</h3>
+        <p>Creative Designing Lead at SchoolBusMedia. Expert in attention-driven designs.</p>
+      </div>
+    </div>
+
+    <!-- LEFT (Hover box RIGHT) -->
+    <div class="member left">
+      <img src="2.jpg" class="circle">
+      <div class="hover-box">
+        <h3>Abhiram</h3>
+        <p>Research Specialist, trend expert and master of virality formulas.</p>
+      </div>
+    </div>
+
+    <!-- RIGHT (Hover box LEFT) -->
+    <div class="member right">
+      <img src="3.jpg" class="circle">
+      <div class="hover-box">
+        <h3>XYZ</h3>
+        <p>Marketing Team Head shaping deep, relatable brand communication.</p>
+      </div>
+    </div>
+
+    <!-- RIGHT (Hover box LEFT) -->
+    <div class="member right">
+      <img src="4.jpg" class="circle">
+      <div class="hover-box">
+        <h3>Ajay</h3>
+        <p>Content Writing Consultant turning concepts into impactful narratives.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MOBILE/TAB CARD VIEW -->
+  <div class="team-mobile">
+
+    <div class="card">
+      <img src="1.jpg">
+      <h3>Navneet</h3>
+      <p>Creative Designing Lead. Expert in attention-driven design.</p>
+    </div>
+
+    <div class="card">
+      <img src="2.jpg">
+      <h3>Abhiram</h3>
+      <p>Research Specialist. Trend & insights analyst.</p>
+    </div>
+
+    <div class="card">
+      <img src="3.jpg">
+      <h3>XYZ</h3>
+      <p>Marketing Team Head with youth-centric strategy skills.</p>
+    </div>
+
+    <div class="card">
+      <img src="4.jpg">
+      <h3>Ajay</h3>
+      <p>Content Writer shaping communication narratives.</p>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
